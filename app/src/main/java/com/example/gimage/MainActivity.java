@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
         GsonFactory jsonFactory = GsonFactory.getDefaultInstance();
         Vision.Builder builder = new Vision.Builder(httpTransport, jsonFactory, null);
-        builder.setVisionRequestInitializer(new VisionRequestInitializer("AIzaSyCuiWsRujAdUWwG0sb4Y13ul466IJMHoFM"));
+        builder.setVisionRequestInitializer(new VisionRequestInitializer("KEY"));
         Vision vision = builder.build();
 
         //4. CALL Vision.Images.Annotate
