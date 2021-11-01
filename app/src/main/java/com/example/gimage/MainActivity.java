@@ -6,6 +6,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
@@ -47,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void buttonClicked(View v) {
+
+    }
+
     void myVisionTester() throws IOException
     {
         //1. ENCODE image.
@@ -70,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         HttpTransport httpTransport = AndroidHttp.newCompatibleTransport();
         GsonFactory jsonFactory = GsonFactory.getDefaultInstance();
         Vision.Builder builder = new Vision.Builder(httpTransport, jsonFactory, null);
-        builder.setVisionRequestInitializer(new VisionRequestInitializer("KEY"));
+        builder.setVisionRequestInitializer(new VisionRequestInitializer(""));
         Vision vision = builder.build();
 
         //4. CALL Vision.Images.Annotate
